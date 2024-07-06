@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") -%>
+<h1>Home</h1>
+<p>
+  <%= homeContent %>
+</p>
+<% pD.forEach(function(element){ %>
+  <h1><%= element.composetitle %></h1>
+  <p>
+    <%= element.composecontent.substring(0,100)+"..." %>
+    <a href="posts/<%=element.composetitle%>">read more</a>
+  </p>
+<% }) %>
+<%- include("partials/footer.ejs") -%>
